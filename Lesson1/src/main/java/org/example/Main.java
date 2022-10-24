@@ -1,26 +1,24 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.lang.reflect.Array;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-
         int count = 0;
-
-        System.out.println("Введите набор чисел через пробел");
-        System.out.println("Хммммм, давай-ка узнаем сколько здесь положетельных чисел");
-        Scanner scan = new Scanner(System.in);
-        String[] arg = scan.nextLine().split(" ");
-        for (String s : arg) {
-            int i = Integer.parseInt (s);
-            if (i > 0) {
-                count++;
+        System.out.println("Введите числа через пробел");
+        Scanner console = new Scanner(System.in);
+        String[] str = console.nextLine().split(" ");
+        for (String s : str) {
+            try {
+                int i = Integer.parseInt(s);
+                if (i > 0) {
+                    count++;
+                }
+            } catch (NumberFormatException exception) {
+                System.out.println("Некоректный символ был проигнорирован");
             }
         }
-        System.out.println(count);
-
-
+        System.out.println("Количество чисел больше нуля = " + count);
     }
+
 }
