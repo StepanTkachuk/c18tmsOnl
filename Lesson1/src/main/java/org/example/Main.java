@@ -15,7 +15,7 @@ public class Main {
                     count++;
                 }
             } catch (NumberFormatException exception) {
-                System.out.println("Некоректный символ был проигнорирован");
+                System.out.println("Некорректный символ был проигнорирован");
             }
         }
         System.out.println("Количество чисел больше нуля = " + count);
