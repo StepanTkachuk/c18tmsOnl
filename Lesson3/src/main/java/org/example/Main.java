@@ -19,12 +19,7 @@ public class Main {
     }
 
     public static int max(int a, int b) {
-        if (a > b) {
-            return a;
-        }
-        if (a < b) {
-            return b;
-        } else return a;
+        return Math.max(a, b);
     }
 
     public static double average(int[] array) {
@@ -46,8 +41,6 @@ public class Main {
     }
 
     public static double calculateHypotenuse(int a, int b) {
-        double hypotenuse = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-        return hypotenuse;
+        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
     }
-
 }
