@@ -1,6 +1,6 @@
 package org.example;
 
-public class Main {
+public class HomeWork {
     public static void main(String[] args) {
         System.out.println(sum(100, 200));
         System.out.println(sum(Integer.MAX_VALUE, Integer.MAX_VALUE));
@@ -54,11 +54,11 @@ public class Main {
      */
 
     public static double average(int[] array) {
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
         }
-        return (double) sum / array.length;
+        return sum / array.length;
     }
 
     /**
