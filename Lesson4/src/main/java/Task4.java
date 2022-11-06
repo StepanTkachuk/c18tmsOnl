@@ -17,27 +17,15 @@ public class Task4 {
 // выводиться фраза о количестве полных часов, содержащихся в n секундах.
 
     public static void programmerIvanov() {
-        int[] array = new int[28801];
-        int random = new Random().nextInt(array.length);
-        System.out.println("До конца рабочего дня осталось " + random + " секунд!");
-        if (random >= 25200) {
-            System.out.println("До конца рабочего дня осталось 8 часов!");
-        } else if (random > 21600) {
-            System.out.println("До конца рабочего дня осталось 7 часов!");
-        } else if (random > 18000) {
-            System.out.println("До конца рабочего дня осталось 6 часов!");
-        } else if (random > 14400) {
-            System.out.println("До конца рабочего дня осталось 5 часов!");
-        } else if (random > 10800) {
-            System.out.println("До конца рабочего дня осталось 4 часа!");
-        } else if (random > 7200) {
-            System.out.println("До конца рабочего дня осталось 3 часа!");
-        } else if (random > 3600) {
-            System.out.println("До конца рабочего дня осталось 2 часа!");
-        } else if (random > 0) {
-            System.out.println("До конца рабочего дня остался 1 час!");
-        } else {
-            System.out.println("Рабочий день окончен!");
+        Random random = new Random();
+        int valueSec = random.nextInt(28800);
+        int valueHours = valueSec / 3600;
+        System.out.println("Секунд осталось " + valueSec);
+        switch (valueHours) {
+            case 0 -> System.out.println("До конца рабочего дня осталось меньше часа");
+            case 1 -> System.out.println("До конца рабочего дня остался " + valueHours + " час");
+            case 2, 3, 4 -> System.out.println("До конца рабочего дня осталось " + valueHours + " часа");
+            default -> System.out.println("До конца рабочего дня осталось " + valueHours + " часов");
         }
     }
 }
