@@ -18,7 +18,7 @@ public class Task4 {
 
     public static void programmerIvanov() {
         Random random = new Random();
-        int valueSec = random.nextInt(28800);
+        int valueSec = random.nextInt(28801);
         int valueHours = valueSec / 3600;
         System.out.println("Секунд осталось " + valueSec);
         switch (valueHours) {
