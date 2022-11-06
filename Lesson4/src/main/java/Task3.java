@@ -12,15 +12,13 @@ public class Task3 {
     public static void lessModulo() {
         System.out.println("Введите три числа");
         Scanner scanner = new Scanner(System.in);
-        int[] array = new int[3];
-        for (int i = 0; i < 3; i++) {
-            array[i] = scanner.nextInt();
-        }
-        int min = array[0];
+        double[] array = new double[3];
         for (int i = 0; i < array.length; i++) {
-            if (min < Math.abs(array[i])) {
-
-            } else {
+            array[i] = scanner.nextDouble();
+        }
+        double min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (min > Math.abs(array[i])) {
                 min = array[i];
             }
         }
