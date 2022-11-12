@@ -20,12 +20,10 @@ public class TaskDop4 {
             System.out.println(count + " программистов");
         } else if (value1 == 1) {
             System.out.println(count + " программист");
-        } else if (value1 == 0) {
-            System.out.println(count + " программистов");
-        } else if (value1 >= 5) {
-            System.out.println(count + " программистов");
-        } else {
+        } else if (value1 >= 2 && value1 <= 5) {
             System.out.println(count + " программиста");
+        } else {
+            System.out.println(count + " программистов");
         }
     }
 }
