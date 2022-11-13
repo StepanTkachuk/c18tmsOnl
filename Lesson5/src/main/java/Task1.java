@@ -8,9 +8,8 @@ public class Task1 {
 //        Если число равно 1, выводим на консоль “Понедельник”, 2 –”Вторник” и так далее.
 //        Если 6 или 7 – “Выходной”.
     public static void daysOfTheWeek() {
-        double random = 1 + Math.random() * 7;
-        System.out.println((int) random);
-        switch ((int) random) {
+        int random = 1 + (int) (Math.random() * 7);
+        switch (random) {
             case (1) -> System.out.println("Понедельник");
             case (2) -> System.out.println("Вторник");
             case (3) -> System.out.println("Среда");
