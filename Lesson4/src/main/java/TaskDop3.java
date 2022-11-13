@@ -1,6 +1,6 @@
 public class TaskDop3 {
     public static void main(String[] args) {
-        System.out.println(calculateCountOfOddElementsInMatrix(new int[]{1, 2, 3, 4, 5, 6}));
+        System.out.println(calculateCountOfOddElementsInMatrix(new int[]{-1, -2, -3, -4, -5, -6}));
     }
 
     /**
@@ -11,7 +11,7 @@ public class TaskDop3 {
     public static int calculateCountOfOddElementsInMatrix(int[] ints) {
         int count = 0;
         for (int i = 0; i < ints.length; i++) {
-            if (ints[i] % 2 > 0) {
+            if (ints[i] % 2 != 0) {
                 count++;
             }
         }

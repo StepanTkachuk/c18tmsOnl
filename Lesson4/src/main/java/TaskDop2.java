@@ -15,7 +15,11 @@ public class TaskDop2 {
             number++;
         } else if (number < 0) {
             number = number - 2;
-        } else number = 10;
+        } else {
+            number = 10;
+        }
         return number;
     }
 }
+
+
