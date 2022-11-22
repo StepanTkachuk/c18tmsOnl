@@ -12,6 +12,10 @@ public class Main {
         people[6] = new Person("Victor", 38, "male", new Address("Belarus", "Minsk"));
         PersonRegistry personRegistry = new PersonRegistry(people);
         MilitaryOffice militaryOffice = new MilitaryOffice(personRegistry);
-        militaryOffice.printRecruits();
+        militaryOffice.printRecruitsA();
+        militaryOffice.printRecruitsB();
+        militaryOffice.printRecruitsC();
+        militaryOffice.printRecruitsD();
+
     }
 }
