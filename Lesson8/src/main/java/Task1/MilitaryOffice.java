@@ -22,7 +22,7 @@ public class MilitaryOffice {
         int count = 0;
         System.out.println("Ищем всех мужчин из города Минск с возрастом от 18 до 27 ");
         for (int i = 0; i < personRegistry.getPersons().length; i++) {
-            if (personRegistry.getPersons()[i].getAge() >= 18 && personRegistry.getPersons()[i].getAge() <= 27 && personRegistry.getPersons()[i].getAddress().city.equals("Минск")) {
+            if (personRegistry.getPersons()[i].getAge() >= 18 && personRegistry.getPersons()[i].getAge() <= 27 && personRegistry.getPersons()[i].getAddress().city.equals("Minsk")) {
                 count++;
             }
         }
@@ -44,7 +44,7 @@ public class MilitaryOffice {
         int count = 0;
         System.out.println("Ищем всех с именем Александр");
         for (int i = 0; i < personRegistry.getPersons().length; i++) {
-            if (personRegistry.getPersons()[i].getName().equals("Александр")) {
+            if (personRegistry.getPersons()[i].getName().equals("Aleksandr")) {
                 count++;
             }
         }
