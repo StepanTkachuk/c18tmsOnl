@@ -1,18 +1,10 @@
 package org.example;
 
 public class User {
-    @Deprecated
-    public String allInfo() {
-        return fistName + " " + lastName + " " + sex + " " + age;
-    }
-
-    public int addAge(int value) {
-        return age + value;
-    }
-
-    public String nameAndFirstName() {
-        return fistName + " " + lastName;
-    }
+    String fistName;
+    String lastName;
+    String sex;
+    int age;
 
     public User() {
     }
@@ -29,10 +21,16 @@ public class User {
         this.age = age;
     }
 
-    String fistName;
-    String lastName;
-    String sex;
-    int age;
+    @Deprecated
+    public String allInfo() {
+        return fistName + " " + lastName + " " + sex + " " + age;
+    }
 
+    public int addAge(int value) {
+        return age + value;
+    }
 
+    public String nameAndFirstName() {
+        return fistName + " " + lastName;
+    }
 }
