@@ -1,9 +1,9 @@
-package Task1;
+package task_about_military_office;
 
 public class Address {
-    String country;
+    private String country;
     String city;
-    String allAddress;
+    private String allAddress;
 
 
     public Address(String country, String city) {

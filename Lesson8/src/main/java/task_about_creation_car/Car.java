@@ -1,11 +1,11 @@
-package Task2;
+package task_about_creation_car;
 
 public class Car {
-    Engine engine;
-    GasTank gasTank;
-    String model;
-    int yearOfIssue;
-    int mileage;
+    private final Engine engine;
+    private GasTank gasTank;
+    private String model;
+    private int yearOfIssue;
+    private int mileage;
 
     public Car(Engine engine, GasTank gasTank) {
         this.engine = engine;
@@ -39,7 +39,7 @@ public class Car {
 
     public void fillingCarTank() {
         gasTank.tankFilling();
-        System.out.println("Текущее топливо в баке = " + gasTank.maxFuelCount);
+        System.out.println("Текущее топливо в баке = " + gasTank.getMaxFuelCount());
     }
 
     public void drivingCar() {

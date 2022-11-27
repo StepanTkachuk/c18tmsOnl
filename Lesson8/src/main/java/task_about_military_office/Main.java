@@ -1,4 +1,4 @@
-package Task1;
+package task_about_military_office;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,10 +12,10 @@ public class Main {
         people[6] = new Person("Victor", 38, "male", new Address("Belarus", "Minsk"));
         PersonRegistry personRegistry = new PersonRegistry(people);
         MilitaryOffice militaryOffice = new MilitaryOffice(personRegistry);
-        militaryOffice.printRecruitsA();
-        militaryOffice.printRecruitsB();
-        militaryOffice.printRecruitsC();
-        militaryOffice.printRecruitsD();
+        militaryOffice.getRecruitsByAge();
+        militaryOffice.getRecruitsByCity();
+        militaryOffice.getAllPeopleByAge();
+        militaryOffice.getRecruitsWithAleksandrName();
 
     }
 }
