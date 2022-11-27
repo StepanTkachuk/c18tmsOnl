@@ -13,18 +13,18 @@ public class Computer {
     }
 
     Scanner scanner = new Scanner(System.in);
-    String cpu;
-    String ram;
-    String hdd;
-    int resource;
-    boolean burned; //true - сгорел, false - не сгорел
+    private String cpu;
+    private String ram;
+    private String hdd;
+    private int resource;
+    private boolean burned; //true - сгорел, false - не сгорел
 
     public String description() {
         return cpu + " " + ram + " " + hdd + " " + resource;
     }
 
     public void onOrOff() {
-        if (resource <= 0 | burned) {
+        if (resource <= 0 || burned) {
             System.out.println("Компьютер сгорел");
         } else {
             System.out.println("Выберите действие on или off");

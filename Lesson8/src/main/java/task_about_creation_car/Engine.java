@@ -1,7 +1,7 @@
-package Task2;
+package task_about_creation_car;
 
 public class Engine {
-    final String type;
+    private final String type;
     boolean condition; //false - заглушен. true - запущен
 
 

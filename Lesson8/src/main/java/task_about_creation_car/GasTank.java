@@ -1,8 +1,8 @@
-package Task2;
+package task_about_creation_car;
 
 public class GasTank {
 
-    int maxFuelCount;
+    private int maxFuelCount;
     int fuelCount;
 
     public GasTank(int maxFuelCount, int fuelCount) {

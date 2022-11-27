@@ -1,4 +1,4 @@
-package Task1;
+package task_about_military_office;
 
 public class PersonRegistry {
     private Person persons[];

@@ -1,13 +1,13 @@
-package Task1;
+package task_about_military_office;
 
 public class MilitaryOffice {
-    PersonRegistry personRegistry;
+    private PersonRegistry personRegistry;
 
     public MilitaryOffice(PersonRegistry personRegistry) {
         this.personRegistry = personRegistry;
     }
 
-    public void printRecruitsA() {
+    public void getRecruitsByAge() {
         int count = 0;
         System.out.println("Ищем всех мужчин с возрастом от 18 до 27");
         for (int i = 0; i < personRegistry.getPersons().length; i++) {
@@ -18,7 +18,7 @@ public class MilitaryOffice {
         System.out.println(count);
     }
 
-    public void printRecruitsB() {
+    public void getRecruitsByCity() {
         int count = 0;
         System.out.println("Ищем всех мужчин из города Минск с возрастом от 18 до 27 ");
         for (int i = 0; i < personRegistry.getPersons().length; i++) {
@@ -29,7 +29,7 @@ public class MilitaryOffice {
         System.out.println(count);
     }
 
-    public void printRecruitsC() {
+    public void getAllPeopleByAge() {
         int count = 0;
         System.out.println("Ищем всех с возрастом от 25 до 27");
         for (int i = 0; i < personRegistry.getPersons().length; i++) {
@@ -40,7 +40,7 @@ public class MilitaryOffice {
         System.out.println(count);
     }
 
-    public void printRecruitsD() {
+    public void getRecruitsWithAleksandrName() {
         int count = 0;
         System.out.println("Ищем всех с именем Александр");
         for (int i = 0; i < personRegistry.getPersons().length; i++) {
