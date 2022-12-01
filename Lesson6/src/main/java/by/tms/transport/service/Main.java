@@ -1,6 +1,6 @@
-package by.tms.service;
+package by.tms.transport.service;
 
-import by.tms.model.Computer;
+import by.tms.transport.model.Computer;
 
 public class Main {
     public static void main(String[] args) {
