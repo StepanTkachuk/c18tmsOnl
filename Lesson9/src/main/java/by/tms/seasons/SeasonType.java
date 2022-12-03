@@ -1,15 +1,15 @@
 package by.tms.seasons;
 
 public enum SeasonType {
-    ЗИМА(0),
-    ВЕСНА(10),
-    ЛЕТО(25) {
+    WINTER(0),
+    SPRING(10),
+    SUMMER(25) {
         @Override
         public String getDescription() {
             return "Тёплое время года";
         }
     },
-    ОСЕНЬ(15);
+    AUTUMN(15);
     int averageTemp;
 
 
