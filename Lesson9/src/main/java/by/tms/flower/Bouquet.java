@@ -6,7 +6,7 @@ public class Bouquet {
     public void getPrice() {
         int costBouquet = 0;
         for (int i = 0; i < flowers.length; i++) {
-            costBouquet += flowers[i].cost;
+            costBouquet += flowers[i].getCost();
         }
         System.out.println("Стоимость букета равна " + costBouquet);
     }
@@ -14,8 +14,9 @@ public class Bouquet {
     public void infoAboutBouquet() {
         System.out.print("Букет состоит из: ");
         for (int i = 0; i < flowers.length; i++) {
-            System.out.print(flowers[i].name + " стоимостью " + flowers[i].getCost() + " ");
+            System.out.print(flowers[i].getName() + " стоимостью " + flowers[i].getCost() + " ");
         }
+        System.out.println();
     }
 
     public Flower[] getFlowers() {

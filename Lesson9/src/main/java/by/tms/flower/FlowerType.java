@@ -6,7 +6,7 @@ import lombok.Setter;
 public enum FlowerType {
     @Getter
     @Setter
-    РОЗА(5), ТЮЛЬПАН(3), РОМАШКА(1), АСТРА(2), ХРИЗАНТЕМА(4);
+    ROSE(5), LILY(3), HERBERA(1), TULIP(2), CARNATION(4);
     int cost;
 
     FlowerType(int cost) {

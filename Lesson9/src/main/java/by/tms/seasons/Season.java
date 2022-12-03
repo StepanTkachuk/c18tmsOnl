@@ -20,10 +20,10 @@ public class Season {
 
     public void infoAboutSeason(SeasonType seasonType) {
         switch (seasonType) {
-            case ЗИМА -> System.out.println("Я люблю Зиму!");
-            case ВЕСНА -> System.out.println("Я люблю Весну!");
-            case ЛЕТО -> System.out.println("Я люблю Лето!");
-            case ОСЕНЬ -> System.out.println("Я люблю Осень!");
+            case WINTER -> System.out.println("Я люблю Зиму!");
+            case SPRING -> System.out.println("Я люблю Весну!");
+            case SUMMER -> System.out.println("Я люблю Лето!");
+            case AUTUMN -> System.out.println("Я люблю Осень!");
 
         }
     }
