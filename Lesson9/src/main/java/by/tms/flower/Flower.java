@@ -13,7 +13,4 @@ public class Flower {
     private String name;
     private int cost;
 
-    public Flower(FlowerType flowerType) {
-
-    }
 }
