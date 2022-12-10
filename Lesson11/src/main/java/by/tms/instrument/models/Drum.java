@@ -1,11 +1,5 @@
 package by.tms.instrument.models;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
-@AllArgsConstructor
-@NoArgsConstructor
-
 public class Drum implements Instrument {
     private int drumValue;
 
