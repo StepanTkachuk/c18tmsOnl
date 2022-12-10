@@ -12,8 +12,7 @@ public class Main {
         apricot.fruitPrice(5);
         Pear pear = new Pear(7);
         pear.fruitPrice(7);
-        int allSum;
-        allSum = apple.sumApple() + apricot.sumApricot() + pear.sumPear();
+        int allSum = apple.sumApple() + apricot.sumApricot() + pear.sumPear();
         System.out.println(allSum);
     }
 }
