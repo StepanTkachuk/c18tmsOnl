@@ -17,6 +17,18 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.32</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
@@ -51,6 +63,8 @@
         <module>Lesson17</module>
         <module>Lesson18</module>
         <module>Lesson19</module>
+        <module>Lesson20</module>
+        <module>Lesson21</module>
     </modules>
 
 </project>
