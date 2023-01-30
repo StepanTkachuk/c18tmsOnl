@@ -3,7 +3,7 @@ package by.tms.models;
 public class CashBox {
     private static int cashBoxCounter;
     private final int id;
-    private Integer queueSize;
+    private Integer queueSize = 0;
     private final Object lock = new Object();
 
     public CashBox() {
