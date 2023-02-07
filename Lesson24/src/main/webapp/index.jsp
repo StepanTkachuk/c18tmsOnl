@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>User Form</title>
+    <title>by.tms.models.Calculator</title>
 </head>
 <body>
-<form action="hello" method="POST">
-    Parametr1: <input name="userParametr1"/>
+<form action="calculator" method="POST">
+    Parameter1: <input name="Parameter1"/>
     <br><br>
-    Parametr2: <input name="userParametr2"/>
+    Parameter2: <input name="Parameter2"/>
     <br><br>
     Operation: <select name="operation">
     <option>+</option>
