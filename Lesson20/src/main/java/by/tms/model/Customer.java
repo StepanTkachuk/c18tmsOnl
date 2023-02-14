@@ -1,4 +1,4 @@
-package by.tms.models;
+package by.tms.model;
 
 public class Customer extends Thread {
     private final Shop shop;

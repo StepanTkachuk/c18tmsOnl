@@ -1,6 +1,6 @@
 package by.tms.service;
 
-import by.tms.models.Student;
+import by.tms.model.Student;
 import by.tms.repository.StudentRepository;
 
 import java.util.Comparator;

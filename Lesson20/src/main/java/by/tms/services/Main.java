@@ -1,9 +1,9 @@
 package by.tms.services;
 
-import by.tms.models.Customer;
-import by.tms.models.LeastQueueCashBoxStrategy;
-import by.tms.models.RandomCashBoxStrategy;
-import by.tms.models.Shop;
+import by.tms.model.Customer;
+import by.tms.model.LeastQueueCashBoxStrategy;
+import by.tms.model.RandomCashBoxStrategy;
+import by.tms.model.Shop;
 
 import java.util.Random;
 

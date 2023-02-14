@@ -1,6 +1,6 @@
 package by.tms.servlet;
 
-import by.tms.models.Calculator;
+import by.tms.model.Calculator;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

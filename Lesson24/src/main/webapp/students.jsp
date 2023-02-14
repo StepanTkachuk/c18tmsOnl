@@ -1,5 +1,5 @@
-<%@ page import="by.tms.models.Student" %>
-<%@ page import="by.tms.models.Student" %>
+<%@ page import="by.tms.model.Student" %>
+<%@ page import="by.tms.model.Student" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>

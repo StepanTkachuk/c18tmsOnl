@@ -1,4 +1,4 @@
-package by.tms.models;
+package by.tms.model;
 
 public class LeastQueueCashBoxStrategy implements ChooseCashBoxStrategy {
     @Override

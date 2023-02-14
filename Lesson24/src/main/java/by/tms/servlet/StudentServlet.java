@@ -1,6 +1,6 @@
 package by.tms.servlet;
 
-import by.tms.models.Student;
+import by.tms.model.Student;
 import by.tms.service.StudentService;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
