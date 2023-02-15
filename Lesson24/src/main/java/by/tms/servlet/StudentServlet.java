@@ -1,6 +1,6 @@
 package by.tms.servlet;
 
-import by.tms.models.Student;
+import by.tms.model.Student;
 import by.tms.service.StudentService;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -26,7 +26,7 @@ public class StudentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         List<Student> students = studentService.findStudents();
-        req.setAttribute("students", students);
+        req.setAttribute("students_db.students", students);
         try {
             getServletContext().getRequestDispatcher("/students.jsp").forward(req, resp);
             resp.sendRedirect("/db");

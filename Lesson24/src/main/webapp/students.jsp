@@ -1,6 +1,5 @@
-<%@ page import="by.tms.models.Student" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="by.tms.models.Student" %>
+<%@ page import="by.tms.model.Student" %>
+<%@ page import="by.tms.model.Student" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -18,7 +17,7 @@
         <th>Course</th>
     </tr>
     <%
-        List<Student> students = (List<Student>) request.getAttribute("students");
+        List<Student> students = (List<Student>) request.getAttribute("students_db.students");
         for (Student student : students) {
     %>
     <tr>

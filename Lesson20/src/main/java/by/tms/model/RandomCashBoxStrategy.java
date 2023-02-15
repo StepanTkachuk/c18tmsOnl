@@ -1,4 +1,4 @@
-package by.tms.models;
+package by.tms.model;
 
 import java.util.Random;
 
