@@ -1,54 +1,39 @@
-<%@ page import="by.tms.model.Student" %>
-<%@ page import="by.tms.model.Student" %>
-<%@ page import="java.util.List" %>
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
-    <title>Students List</title>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" href="<c:url value="/css/table.css"/>">
+    <link rel="stylesheet" href="<c:url value="/css/login.css"/>">
 </head>
+<h1><span class="orange">List of Students</span></h1>
 <body>
-<h1>Displaying Students List</h1>
-<table border="1">
-    <caption>Students table</caption>
+<div>
+    <div style="float: left; margin: 0 10px 0 10px">
+        <a href="<c:url value="/add_student.jsp"/>" class="button">Add Student</a>
+    </div>
+    <div style="float: right">
+        <a href="<c:url value="form.jsp"/>" class="button">Back</a>
+    </div>
+</div>
+<br>
+<table class="container">
     <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Surname</th>
         <th>Course</th>
+        <th></th>
     </tr>
-    <%
-        List<Student> students = (List<Student>) request.getAttribute("students_db.students");
-        for (Student student : students) {
-    %>
-    <tr>
-        <td><%=student.getId()%>
-        </td>
-        <td><%=student.getName()%>
-        </td>
-        <td><%=student.getSurname()%>
-        </td>
-        <td><%=student.getCourse()%>
-        </td>
-    </tr>
-    <%}%>
+    <c:forEach var="student" items="${students}">
+        <tr>
+            <td>${student.id}</td>
+            <td>${student.name}</td>
+            <td>${student.surname}</td>
+            <td>${student.course}</td>
+        </tr>
+    </c:forEach>
 </table>
-
-<form action="calculator" method="POST">
-    Name: <input name="name"/>
-    <br><br>
-    Parameter2: <input name="userParametr2"/>
-    <br><br>
-    Operation: <select name="operation"/>
-    <option>+</option>
-    <option>-</option>
-    <option>*</option>
-    <option>/</option>
-    <br><br>
-    Result: <select name="result">
-</select>
-    <br><br>
-    <input type="submit" value="Submit"/>
-</form>
-
 </body>
 </html>

@@ -19,14 +19,14 @@ public class DBInitContextListener implements ServletContextListener {
         String login = sce.getServletContext().getInitParameter("db_user");
         String password = sce.getServletContext().getInitParameter("db_password");
         try {
-            final String dbDriver = "org.postgresql.Driver";
-            Class.forName(dbDriver);
+            Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url, login, password);
             StudentRepository jdbcStudentRepository = new JdbcStudentRepository(connection);
             StudentService studentService = new StudentService(jdbcStudentRepository);
             sce.getServletContext().setAttribute("studentService", studentService);
             sce.getServletContext().setAttribute("connection", connection);
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("Unexpected error " + e.getMessage());
         }
     }

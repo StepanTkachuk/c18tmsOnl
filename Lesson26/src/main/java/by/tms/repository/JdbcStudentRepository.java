@@ -2,27 +2,25 @@ package by.tms.repository;
 
 import by.tms.model.Student;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class JdbcStudentRepository implements StudentRepository {
-
     private final Connection connection;
 
     public JdbcStudentRepository(Connection connection) {
         this.connection = connection;
     }
 
+    private static final String GET_ALL_STUDENTS_QUERY = "select * from students_db.students";
+    private static final String INSERT_STUDENT_QUERY = "insert into students_db.students(name, surname, course) values(?, ?, ?)";
+
     @Override
     public List<Student> findStudents() {
         try {
             Statement statement = connection.createStatement();
-            String sql = "select id, name, surname, course from students_db.students";
-            ResultSet rs = statement.executeQuery(sql);
+            ResultSet rs = statement.executeQuery(GET_ALL_STUDENTS_QUERY);
             final List<Student> students = new ArrayList<>();
             while (rs.next()) {
                 int id = rs.getInt("id");
@@ -38,19 +36,20 @@ public class JdbcStudentRepository implements StudentRepository {
     }
 
     @Override
-    public void addStudent(Student student) {
-        // добавить добавление студента
+    public List<Student> addStudent(Student student) {
+        List<Student> updatedStudents = new ArrayList<>();
 
         try {
-            Statement statement = connection.createStatement();
-            String sql = "INSERT INTO students_db.students (name, surName, course)\n" +
-                    "VALUES (student.name, value2, value3);";
-            statement.executeQuery(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_STUDENT_QUERY);
+            preparedStatement.setString(1, student.getName());
+            preparedStatement.setString(2, student.getSurname());
+            preparedStatement.setInt(3, student.getCourse());
+            preparedStatement.executeUpdate();
+            updatedStudents = findStudents();
         } catch (SQLException e) {
-            throw new RuntimeException(e)
-                    ;
+            System.out.println(e.getMessage());
         }
 
-
+        return updatedStudents;
     }
 }
