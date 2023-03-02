@@ -1,20 +1,13 @@
 package by.tms.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
-@Setter
+@ToString
 @EqualsAndHashCode
 public class User {
-
-    private String email;
+    private String login;
     private String password;
-
-    {
-        email = "test@gmail.com";
-        password = "12345";
-    }
-
 }

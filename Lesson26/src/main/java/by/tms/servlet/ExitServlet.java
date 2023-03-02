@@ -1,5 +1,6 @@
 package by.tms.servlet;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,15 +10,14 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet("/home")
-public class HomeServlet extends HttpServlet {
+@WebServlet("/exit")
+public class ExitServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession(false);
-        Object email = session.getAttribute("email");
-        Object pass = session.getAttribute("pass");
-        req.getRequestDispatcher("home.jsp").forward(req, resp);
-        System.out.println("from session " + email + " " + pass);
+        HttpSession session = req.getSession();
+        session.setAttribute("accessUser", null);
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+        requestDispatcher.forward(req, resp);
     }
 }

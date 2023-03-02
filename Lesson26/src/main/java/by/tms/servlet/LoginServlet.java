@@ -13,10 +13,10 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet(value = "/login")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
+
     private UserAware userService;
-    private User user;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -25,23 +25,23 @@ public class LoginServlet extends HttpServlet {
     }
 
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        HttpSession session = request.getSession();
-        if (session.getAttribute("accessUser") != null) {
-            forwardTo(request, response, "/menu.jsp");
-        } else {
-            forwardTo(request, response, "/login.jsp");
-        }
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         if (userService.isVerifyUser(login, password)) {
             HttpSession session = req.getSession();
-            session.setAttribute("accessUser", new User("123", "123"));
-            forwardTo(req, resp, "/menu.jsp");
+            session.setAttribute("accessUser", new User(login, password));
+            forwardTo(req, resp, "/form.jsp");
+        } else {
+            forwardTo(req, resp, "/login.jsp");
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        if (session.getAttribute("accessUser") != null) {
+            forwardTo(req, resp, "/form");
         } else {
             forwardTo(req, resp, "/login.jsp");
         }

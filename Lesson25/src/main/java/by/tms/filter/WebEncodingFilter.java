@@ -1,17 +1,17 @@
 package by.tms.filter;
 
 import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.annotation.WebInitParam;
 
 import java.io.IOException;
 
-//@WebFilter(urlPatterns = "/*",
-//           initParams = {@WebInitParam(name = "encoding", value = "UTF-8", description = "Encoding params")})
+@WebFilter(urlPatterns = "/*", initParams = {@WebInitParam(name = "encoding", value = "UTF-8", description = "Encoding params")})
 public class WebEncodingFilter implements Filter {
-
     private String encoding;
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
         encoding = filterConfig.getInitParameter("encoding");
     }
 
@@ -27,7 +27,6 @@ public class WebEncodingFilter implements Filter {
 
     @Override
     public void destroy() {
-        System.out.println("filter destroy");
         encoding = null;
     }
 }
